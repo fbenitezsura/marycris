@@ -37,13 +37,9 @@ const SortProducts = ({ sortBy, setSortBy, refinementList, setRefinementList }: 
   }
 
   return (
-    <div className="content-container max-w-[1180px] w-full h-full flex flex-col md:flex-row justify-start md:justify-end items-center">
-      <div className="w-full flex justify-start md:justify-end items-center">
-        <Adjustments />
-        <span className="m-2">Ordernar por: </span>
-      </div>
+    <div className="content-container max-w-[1110px] h-[56px] w-full flex flex-col md:flex-row justify-start md:justify-end items-center bg-white ml-[15px] pr-[10px] rounded-md">
       <Dropdown
-        title="Ordenar por:"
+        title=""
         items={sortOptions}
         value={sortBy}
         handleChange={handleChange}

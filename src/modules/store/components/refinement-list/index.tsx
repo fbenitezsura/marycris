@@ -19,7 +19,7 @@ const RefinementList = ({
   const [isOpen, setOpen] = useState(false);
   return (
     <>
-      <div className="hidden md:flex small:flex-col gap-12 px-8 py-4 mb-8 small:pr-0 small:pl-8 small:min-w-[250px] small:ml-[1.675rem]">
+      <div className="px-[30px] pt-[25px] pb-[18px] bg-white rounded-[10px] pr-[60px] mt-[56px]">
         {!search && (
           <CollectionFilter 
           refinementList={refinementList}

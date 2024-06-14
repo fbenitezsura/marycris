@@ -10,13 +10,13 @@ const FooterNav = () => {
   const { product_categories } = useProductCategories()
 
   return (
-    <div className="border-t border-ui-border-base mt-20">
-      <div className="flex flex-col bg-[#282828] md:px-[100px] px-[16px]">
+    <div className="mt-[-15px] bg-[#2d2c6e]">
+      <div className="flex flex-col md:px-[100px] px-[16px]">
         <div className="flex flex-col gap-y-6 xsmall:flex-row items-start justify-between py-20">
           <div>
             <Link
               href="/"
-              className="txt-compact-xlarge-plus text-ui-fg-subtle text-white hover:underline uppercase"
+              className="text-white hover:underline uppercase"
             >
               {process.env.NEXT_PUBLIC_NAME_ECOMMERCE}
             </Link>

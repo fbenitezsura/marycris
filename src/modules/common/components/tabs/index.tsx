@@ -4,6 +4,7 @@ import { Tab } from '@headlessui/react';
 import ProductPreview from "@modules/products/components/product-preview"
 import { useFeaturedProductsQuery } from "@lib/hooks/use-layout-data"
 import { useEffect, useState } from 'react';
+import Link from "next/link"
 function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
 }
@@ -29,11 +30,11 @@ export default function Tabs({
                             key={category}
                             className={({ selected }) =>
                                 classNames(
-                                    'min-w-[150px] w-full md:min-w-auto py-2.5 text-sm font-medium leading-5',
+                                    'w-full md:min-w-auto py-2.5 px-[22px] text-[16px] font-medium leading-5',
                                     'focus:outline-none',
                                     selected
-                                        ? 'underline text-black underline-offset-[12px]'
-                                        : 'text-neutral-700'
+                                        ? 'text-[#96ae00]'
+                                        : 'text-[#4d5574]'
                                 )
                             }
                         >
@@ -41,11 +42,11 @@ export default function Tabs({
                         </Tab>
                     ))}
                 </Tab.List>
-                <Tab.Panels className="grid grid-cols-12 gap-x-6 gap-y-8 mt-[20px]">
+                <Tab.Panels className="grid grid-cols-12 gap-x-6 gap-y-8 mt-[10px]">
                     {data && data.map((product) => {
-                        console.log('product',product)
+                        console.log('product', product)
                         return (
-                            <div className="col-span-6 md:col-span-3">
+                            <div className="col-span-12 md:col-span-3">
                                 <ProductPreview isFeatured {...product} />
                             </div>
 
@@ -58,6 +59,15 @@ export default function Tabs({
                     )}
                 </Tab.Panels>
             </Tab.Group>
+            <p className="text-[#4d5574] text-[16px] mt-[40px] flex justify-center">Descrube todo la calidad de nuestros productos.
+                <Link href="/" className="text-[16px] text-[#96ae00] flex items-center">
+                    Tienda <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
+                        <path fill-rule="evenodd" d="M13.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L11.69 12 4.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clip-rule="evenodd" />
+                        <path fill-rule="evenodd" d="M19.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 1 1-1.06-1.06L17.69 12l-6.97-6.97a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clip-rule="evenodd" />
+                    </svg>
+
+                </Link>
+            </p>
         </div>
     )
 }

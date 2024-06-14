@@ -1,5 +1,5 @@
 import { Fragment } from 'react'
-import { Listbox, Transition } from '@headlessui/react'
+import { Menu, MenuButton, MenuItem, MenuItems, Transition } from '@headlessui/react'
 import { TriangleDownMini } from "@medusajs/icons"
 import clsx from "clsx"
 
@@ -43,49 +43,31 @@ export default function Dropdown({
 }) {
 
     return (
-        <div className={clsx('relative z-40', className)}>
-            <Listbox value={value} onChange={(e) => handleChange(e)}>
-
-                <Listbox.Button
-                    className={clsx('', variants[variant])}>
-                    <span className="">
-                        {value.label}
-                    </span>
-                    <span className="pointer-events-none pt-4 pb-1 absolute inset-y-0 right-0 flex items-center pr-2">
-                        <TriangleDownMini />
-                    </span>
-                </Listbox.Button>
-                <label
-                    htmlFor={title}
-                    className={clsx(
-                    "flex items-center text-[9px] justify-center mx-3 transition-all absolute duration-300 top-1 -z-1 origin-0 text-gray-500",
-                    
-                    )}
+        <Menu>
+            <MenuButton className="inline-flex items-center gap-3 rounded-md border-[1px] py-1.5 px-4 w-auto text-sm/6 font-semibold text-[#4D5574] shadow-inner shadow-white/10 focus:outline-none data-[open]:bg-gray-700 data-[focus]:outline-1 data-[focus]:outline-white">
+                {value.label}
+                <TriangleDownMini className="size-4 fill-white/60" />
+            </MenuButton>
+            <Transition
+                enter="transition ease-out duration-75"
+                enterFrom="opacity-0 scale-95"
+                enterTo="opacity-100 scale-100"
+                leave="transition ease-in duration-100"
+                leaveFrom="opacity-100 scale-100"
+                leaveTo="opacity-0 scale-95"
+            >
+                <MenuItems
+                    anchor="bottom end"
+                    className="w-52 origin-top-right rounded-xl border border-white/5 bg-white/5 p-1 text-sm/6 text-white [--anchor-gap:var(--spacing-1)] focus:outline-none"
                 >
-                    {title}
-                </label>
-                <Transition
-                    as={Fragment}
-                    leave="transition ease-in duration-100"
-                    leaveFrom="opacity-100"
-                    leaveTo="opacity-0"
-                >
-                    <Listbox.Options className={clsx('', optionsVariants[variant])}>
-                        {items.map((item, itemIdx) => (
-                            <Listbox.Option
-                                key={itemIdx}
-                                className={({ active }) =>
-                                    `relative cursor-default select-none py-2 pl-4 pr-4 ${active ? 'bg-[#FF5733] text-white cursor-pointer' : 'text-gray-900'
-                                    }`
-                                }
-                                value={item}
-                            >
-                                {item.label}
-                            </Listbox.Option>
-                        ))}
-                    </Listbox.Options>
-                </Transition>
-            </Listbox>
-        </div>
+                    <MenuItem>
+                        <button className="group flex w-full items-center gap-2 rounded-lg py-1.5 px-3 data-[focus]:bg-white/10">
+                            Edit
+                            <kbd className="ml-auto hidden font-sans text-xs text-white/50 group-data-[focus]:inline">⌘E</kbd>
+                        </button>
+                    </MenuItem>
+                </MenuItems>
+            </Transition>
+        </Menu>
     )
 }

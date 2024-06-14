@@ -50,7 +50,7 @@ const TyCTemplate = () => {
             <h2 className="mb-[8px] text-[16px] font-bold max-w-[670px]">7. Ley Aplicable</h2>
             <p className="mb-[16px] text-left max-w-[670px] mx-auto">Estos términos se rigen por la Ley N° 19.496 del Consumidor en Chile y cualquier disputa se resolverá en los tribunales de Concepción.</p>
             <h2 className="mb-[8px] text-[16px] font-bold max-w-[670px]">8. Contacto</h2>
-            <p className="mb-[16px] text-left max-w-[670px] mx-auto">Para cualquier consulta relacionada con su compra, contáctenos a través de <a href="mailto:ehfconcept24@gmail.com">ehfconcept24@gmail.com</a></p>
+            <p className="mb-[16px] text-left max-w-[670px] mx-auto">Para cualquier consulta relacionada con su compra, contáctenos a través de <a href="mailto:mari-cris@gmail.com">Mari-cris@gmail.com</a></p>
         </div>
     )
 

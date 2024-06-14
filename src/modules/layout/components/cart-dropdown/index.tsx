@@ -21,7 +21,7 @@ const CartDropdown = () => {
       <Popover className="relative h-full">
         <Popover.Button className="h-full">
           <Link
-            className="text-white hover:underline"
+            className="text-[#4D5574] hover:underline"
             href="/cart"
           >{`Carrito (${totalItems})`}</Link>
         </Popover.Button>

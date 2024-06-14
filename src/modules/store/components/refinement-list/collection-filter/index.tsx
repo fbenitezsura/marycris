@@ -40,7 +40,7 @@ const CollectionFilter = ({
 
   return (
     <FilterRadioGroup
-      title="Tipo"
+      title="Categorias de Productos"
       items={collectionMap}
       value={collectionId}
       handleChange={handleCollectionChange}

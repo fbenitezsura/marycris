@@ -33,6 +33,10 @@ module.exports = withStoreConfig({
       },
       {
         protocol: "https",
+        hostname: "orfarm-next-js.vercel.app",
+      },
+      {
+        protocol: "https",
         hostname: "ecq-medusa-backend-production.up.railway.app"
       },
       {
