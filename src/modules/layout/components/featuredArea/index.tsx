@@ -31,7 +31,7 @@ const FeaturedArea = () => {
     ];
 
     return (
-        <section className="bg-[url('https://orfarm-next-js.vercel.app/assets/img/shape/footer-shape-1.svg')] bg-cover mt-[30px]">
+        <section className="bg-[url('https://orfarm-next-js.vercel.app/assets/img/shape/footer-shape-1.svg')] bg-cover">
             <div className="container mx-auto">
                 <div className="mb-[15px] border-b-[1px]">
                     <div className="grid grid-cols-10 pt-[20px] md:pt-[50px] pb-[10px] md:pb-[40px]">

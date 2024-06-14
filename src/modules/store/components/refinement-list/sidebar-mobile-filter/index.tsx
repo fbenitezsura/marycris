@@ -11,12 +11,12 @@ const SidebarFiltersMobile = ({
 }: any) => {
 
     return (
-        <div className="block md:hidden">
+        <div className="block md:hidden w-[150px]">
             <button
-            className="w-11/12 mx-auto rounded-md bg-[#E5E5E5] border-none flex py-[8px] shadow-md justify-center items-center mt-[16px] border-1"
+            className="w-11/12 mx-auto rounded-md border-none flex py-[8px] justify-center items-center border-1"
             onClick={()=> {setOpen(!isOpen)}}>
                 <Funnel />
-                <span className="ml-2">Filtrar</span>
+                <span className="ml-2 text-[#4D5574]">Filtrar</span>
             </button>
             <Transition.Root show={isOpen} as={Fragment}>
                 <Dialog as="div" className="relative z-50" onClose={() => { setOpen(false) }}>

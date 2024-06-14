@@ -82,7 +82,7 @@ const FooterNav = () => {
           </div>
         </div>
         <div className="w-full mb-8 text-center text-ui-fg-muted">
-          <Text className="txt-compact-small">
+          <Text className="txt-compact-small text-white">
             © {new Date().getFullYear()}. Todo los derechos reservados.
           </Text>
         </div>

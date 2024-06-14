@@ -44,7 +44,7 @@ export default function Dropdown({
 
     return (
         <Menu>
-            <MenuButton className="inline-flex items-center gap-3 rounded-md border-[1px] py-1.5 px-4 w-auto text-sm/6 font-semibold text-[#4D5574] shadow-inner shadow-white/10 focus:outline-none data-[open]:bg-gray-700 data-[focus]:outline-1 data-[focus]:outline-white">
+            <MenuButton className="inline-flex items-center gap-3 rounded-md border-[1px] py-1.5 w-auto text-sm/6 font-semibold text-[#4D5574] shadow-inner shadow-white/10 focus:outline-none data-[open]:bg-gray-700 data-[focus]:outline-1 data-[focus]:outline-white">
                 {value.label}
                 <TriangleDownMini className="size-4 fill-white/60" />
             </MenuButton>

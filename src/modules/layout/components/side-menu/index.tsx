@@ -94,7 +94,7 @@ const SideMenu = ({ searchModalOpen }: { searchModalOpen: () => void }) => {
                           )}
                         />
                       </div>
-                      <Text className="flex justify-between txt-compact-small">
+                      <Text className="flex justify-between text-white">
                         © {new Date().getFullYear()}. Todos los derechos reservados.
                       </Text>
                     </div>
