@@ -54,10 +54,10 @@ const ProductTemplate: React.FC<ProductTemplateProps> = ({ product }) => {
             </div>
           </div>
         </div>
-        <div className="container mx-auto">
+        <div className="container mx-auto pb-[50px]">
           <ProductTabs product={product} />
         </div>
-        <div className="content-container my-16 px-6 small:px-8 small:my-32">
+        <div className="container mx-auto">
           <RelatedProducts product={product} />
         </div>
         <MobileActions product={product} show={!inView} />

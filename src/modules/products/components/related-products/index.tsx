@@ -54,47 +54,47 @@ const RelatedProducts = ({ product }: RelatedProductsProps) => {
   const previews = usePreviews({ pages: data?.pages, region: cart?.region })
 
   return (
-    <div className="product-page-constraint">
-      <div className="flex flex-col items-center text-center mb-16">
-        <span className="text-base-regular text-gray-600 mb-6">
-          Productos relacionados
-        </span>
-        <p className="text-2xl-regular text-gray-900 max-w-lg">
-          Es posible que también desees consultar estos productos.
-        </p>
+    <div className="product-page-constraint bg-white rounded-t-[10px] pt-[40px] md:pt-[75px] pb-[80px]">
+      <div className="mx-[10px] md:mx-[50px]">
+        <div className="flex text-left mb-[20px]">
+          <span className="text-[14px] md:text-[16px] font-semibold uppercase text-[#2D2A6E] mb-6">
+            Productos relacionados
+          </span>
+        </div>
+
+        <ul className="grid grid-cols-1 small:grid-cols-2 medium:grid-cols-5 gap-x-10 gap-y-8">
+          {previews.map((p) => (
+            <li key={p.id}>
+              <ProductPreview {...p} />
+            </li>
+          ))}
+          {isLoading &&
+            !previews.length &&
+            repeat(8).map((index) => (
+              <li key={index}>
+                <SkeletonProductPreview />
+              </li>
+            ))}
+          {isFetchingNextPage &&
+            repeat(getNumberOfSkeletons(data?.pages)).map((index) => (
+              <li key={index}>
+                <SkeletonProductPreview />
+              </li>
+            ))}
+        </ul>
+        {hasNextPage && (
+          <div className="flex items-center justify-center mt-8">
+            <Button
+              isLoading={isLoading}
+              onClick={() => fetchNextPage()}
+              className="w-72"
+            >
+              Cargar más
+            </Button>
+          </div>
+        )}
       </div>
 
-      <ul className="grid grid-cols-2 small:grid-cols-3 medium:grid-cols-4 gap-x-6 gap-y-8">
-        {previews.map((p) => (
-          <li key={p.id}>
-            <ProductPreview {...p} />
-          </li>
-        ))}
-        {isLoading &&
-          !previews.length &&
-          repeat(8).map((index) => (
-            <li key={index}>
-              <SkeletonProductPreview />
-            </li>
-          ))}
-        {isFetchingNextPage &&
-          repeat(getNumberOfSkeletons(data?.pages)).map((index) => (
-            <li key={index}>
-              <SkeletonProductPreview />
-            </li>
-          ))}
-      </ul>
-      {hasNextPage && (
-        <div className="flex items-center justify-center mt-8">
-          <Button
-            isLoading={isLoading}
-            onClick={() => fetchNextPage()}
-            className="w-72"
-          >
-            Cargar más
-          </Button>
-        </div>
-      )}
     </div>
   )
 }
