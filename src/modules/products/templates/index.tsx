@@ -32,7 +32,7 @@ const ProductTemplate: React.FC<ProductTemplateProps> = ({ product }) => {
   return (
     <ProductProvider product={product}>
       <div className="bg-[#f2f2f6]">
-        <div className="container mx-auto">
+        <div className="container mx-auto mb-[30px]">
           <div className="grid grid-cols-12">
             <div className="col-span-12 md:col-span-10 mt-[45px] w-full relative bg-white grid grid-cols-12 pt-[30px] px-[5px] md:px-[40px] pb-[35px] rounded-[10px]">
               <div className="col-span-12 mb-[25px] pb-[25px]">
@@ -54,7 +54,7 @@ const ProductTemplate: React.FC<ProductTemplateProps> = ({ product }) => {
             </div>
           </div>
         </div>
-        <div className="content-container my-16">
+        <div className="container mx-auto">
           <ProductTabs product={product} />
         </div>
         <div className="content-container my-16 px-6 small:px-8 small:my-32">
