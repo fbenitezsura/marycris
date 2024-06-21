@@ -3,14 +3,15 @@
 import React, { useEffect, useRef, useState } from "react"
 import { ProductProvider } from "@lib/context/product-context"
 import { useIntersection } from "@lib/hooks/use-in-view"
-import ProductInfo from "@modules/products/templates/product-info"
+import ProductHeader from "@modules/products/templates/product-info/product-header"
 import ProductTabs from "@modules/products/components/product-tabs"
 import RelatedProducts from "@modules/products/components/related-products"
 import ImageGallery from "@modules/products/components/image-gallery"
 import MobileActions from "@modules/products/components/mobile-actions"
 import ProductOnboardingCta from "@modules/products/components/product-onboarding-cta"
 import { PricedProduct } from "@medusajs/medusa/dist/types/pricing"
-import ProductActions from "../components/product-actions"
+import ProductActions from "../components/product-actions";
+import ProductSidebar from '@modules/products/components/product-sidebar/index';
 
 type ProductTemplateProps = {
   product: PricedProduct
@@ -30,26 +31,37 @@ const ProductTemplate: React.FC<ProductTemplateProps> = ({ product }) => {
 
   return (
     <ProductProvider product={product}>
-      <div className="content-container flex flex-col small:flex-row small:items-start py-6 relative max-w-[1180px]">
-        <div className="block w-full relative">
-          <ImageGallery images={product?.images || []} />
+      <div className="bg-[#f2f2f6]">
+        <div className="container mx-auto">
+          <div className="grid grid-cols-12">
+            <div className="col-span-12 md:col-span-10 mt-[45px] w-full relative bg-white grid grid-cols-12 pt-[30px] px-[5px] md:px-[40px] pb-[35px] rounded-[10px]">
+              <div className="col-span-12 mb-[25px] pb-[25px]">
+                <ProductHeader product={product} />
+              </div>
+              <div className="col-span-12 grid grid-cols-12">
+                <div className="col-span-12 md:col-span-6 px-[12px]">
+                  <ImageGallery images={product?.images || []} />
+                </div>
+                <div className="col-span-12 md:col-span-6 px-[12px]">
+                  <div className="flex flex-col w-full">
+                    <ProductActions product={product} />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="col-span-12 md:col-span-2 mt-[45px] md:ml-2">
+              <ProductSidebar />
+            </div>
+          </div>
         </div>
-        <div
-          className="flex flex-col small:sticky small:top-48 small:py-0 small:max-w-[300px] w-full py-8 gap-y-12"
-          ref={infoRef}
-        >
-          {isOnboarding && <ProductOnboardingCta />}
-          <ProductInfo product={product} />
-          <ProductActions product={product} />
+        <div className="content-container my-16">
+          <ProductTabs product={product} />
         </div>
+        <div className="content-container my-16 px-6 small:px-8 small:my-32">
+          <RelatedProducts product={product} />
+        </div>
+        <MobileActions product={product} show={!inView} />
       </div>
-      <div className="content-container my-16">
-        <ProductTabs product={product}/>
-      </div>
-      <div className="content-container my-16 px-6 small:px-8 small:my-32">
-        <RelatedProducts product={product} />
-      </div>
-      <MobileActions product={product} show={!inView} />
     </ProductProvider>
   )
 }

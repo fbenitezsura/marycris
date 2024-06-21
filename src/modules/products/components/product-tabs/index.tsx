@@ -27,7 +27,7 @@ const ProductTabs = ({ product }: ProductTabsProps) => {
   }, [product])
 
   return (
-    <div className="w-full">
+    <div className="w-full bg-white">
       {tabs.map((tab, i) => (
         <>{tab.component}</>
       ))}
