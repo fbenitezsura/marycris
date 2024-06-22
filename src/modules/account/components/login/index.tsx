@@ -72,7 +72,7 @@ const Login = () => {
             </span>
           </div>
         )}
-        <Button className="mt-6 w-full" size="large">
+        <Button className="mt-6 w-full bg-[#2D2A6E] hover:bg-[#2D2A6E]" size="large">
           Entrar
         </Button>
       </form>

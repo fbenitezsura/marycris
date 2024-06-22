@@ -5,28 +5,28 @@ const FeaturedArea = () => {
     const featureds = [
         {
             imgSrc: "https://orfarm-next-js.vercel.app/assets/img/icon/feature-icon-1.svg",
-            title: "FAST DELIVERY",
-            description: "Across West & East India"
+            title: "ENTREGA RÁPIDA",
+            description: "En todo coronel"
         },
         {
             imgSrc: "https://orfarm-next-js.vercel.app/assets/img/icon/feature-icon-2.svg",
-            title: "SAFE PAYMENT",
-            description: "100% Secure Payment"
+            title: "PAGO SEGURO",
+            description: "100% Pago Seguro"
         },
         {
             imgSrc: "https://orfarm-next-js.vercel.app/assets/img/icon/feature-icon-3.svg",
-            title: "ONLINE DISCOUNT",
-            description: "Add Multi-buy Discounts"
+            title: "DESCUENTO ONLINE",
+            description: "Descuentos por compras múltiples"
         },
         {
             imgSrc: "https://orfarm-next-js.vercel.app/assets/img/icon/feature-icon-4.svg",
-            title: "HELP CENTER",
-            description: "Dedicated 24/7 Support"
+            title: "CENTRO DE AYUDA",
+            description: "Soporte dedicado 24/7"
         },
         {
             imgSrc: "https://orfarm-next-js.vercel.app/assets/img/icon/feature-icon-5.svg",
-            title: "CURATED ITEMS",
-            description: "From Handpicked Sellers"
+            title: "ARTÍCULOS SELECCIONADOS",
+            description: "De vendedores cuidadosamente seleccionados"
         }
     ];
 

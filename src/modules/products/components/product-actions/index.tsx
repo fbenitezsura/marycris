@@ -19,7 +19,9 @@ const ProductActionsInner: React.FC<ProductActionsProps> = ({ product }) => {
   const { updateOptions, addToCart, options, inStock, variant } =
     useProductActions()
 
-  const price = useProductPrice({ id: product.id!, variantId: variant?.id })
+  const price = useProductPrice({ id: product.id!, variantId: variant?.id });
+
+  console.log('product',product);
 
   const selectedPrice = useMemo(() => {
     const { variantPrice, cheapestPrice } = price
@@ -32,6 +34,7 @@ const ProductActionsInner: React.FC<ProductActionsProps> = ({ product }) => {
 
       {selectedPrice ? (
         <div className="flex flex-col text-ui-fg-base mb-[30px] pb-[25px] border-b-[1px] border-[#e6ecf0]">
+          <span className="text-[24px] text-[#2D2A6E]">{product.subtitle}</span>
           <span
             className={clsx("mb-[8px] text-xl-semi text-[#ea0d42] text-[24px] font-medium leading-[35px]", {
               "text-ui-fg-interactive": selectedPrice.price_type === "sale",

@@ -35,7 +35,7 @@ const ProductTemplate: React.FC<ProductTemplateProps> = ({ product }) => {
         <div className="container mx-auto mb-[30px]">
           <div className="grid grid-cols-12">
             <div className="col-span-12 md:col-span-10 mt-[45px] w-full relative bg-white grid grid-cols-12 pt-[30px] px-[5px] md:px-[40px] pb-[35px] rounded-[10px]">
-              <div className="col-span-12 mb-[25px] pb-[25px]">
+              <div className="col-span-12 mb-[25px] pb-[25px] h-[65px]">
                 <ProductHeader product={product} />
               </div>
               <div className="col-span-12 grid grid-cols-12">

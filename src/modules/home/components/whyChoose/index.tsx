@@ -5,23 +5,23 @@ const WhyChoose = () => {
     const benefits = [
         {
             imgSrc: "https://orfarm-next-js.vercel.app/assets/img/icon/choose-icon1.svg",
-            title: "100% Fresh Food",
-            description: "Adjust global theme options and see design changes in real-time."
+            title: "100% Frescos",
+            description: "Disfruta de huevos frescos y de calidad. Ajusta tus preferencias y ve los cambios en tiempo real."
         },
         {
             imgSrc: "https://orfarm-next-js.vercel.app/assets/img/icon/choose-icon2.svg",
-            title: "Premium Quality",
-            description: "Adjust global theme options and see design changes in real-time."
+            title: "Calidad Premium",
+            description: "Ofrecemos huevos de la más alta calidad. Ajusta tus opciones y observa el diseño en tiempo real."
         },
         {
             imgSrc: "https://orfarm-next-js.vercel.app/assets/img/icon/choose-icon3.svg",
-            title: "100% Natural",
-            description: "Adjust global theme options and see design changes in real-time."
+            title: "100% Naturales",
+            description: "Nuestros huevos son completamente naturales. Personaliza tus preferencias y observa los cambios al instante."
         },
         {
             imgSrc: "https://orfarm-next-js.vercel.app/assets/img/icon/choose-icon4.svg",
-            title: "100% Organic",
-            description: "Adjust global theme options and see design changes in real-time."
+            title: "100% Orgánicos",
+            description: "Encuentra huevos totalmente orgánicos. Ajusta tus opciones y ve los cambios en tiempo real."
         }
     ];
 
@@ -33,7 +33,7 @@ const WhyChoose = () => {
                         <div className="pt-[75px] mb-[35px]">
                             <h4 className="text-[#96ae00] mb-[8px]">~ Porque elegirnos ? ~</h4>
                             <h4 className="text-[#2d2a6e] mb-[8px] font-bold text-[30px] leading-[38px] tracking-[-.3px]">Que nos hace diferente</h4>
-                            <p className="text-[15px] leading-[22px] text-[#4d5574]">The liber tempor cum soluta nobis eleifend option congue doming quod mazim.</p>
+                            <p className="text-[15px] leading-[22px] text-[#4d5574]">Nuestra selección única de huevos frescos y orgánicos, junto con útiles de aseo de calidad, garantiza satisfacción y conveniencia.</p>
                         </div>
                     </div>
                 </div>
@@ -43,11 +43,6 @@ const WhyChoose = () => {
                           <CardBenefit benefit={benefit}/>
                         </div>
                     ))}
-                </div>
-                <div className="grid grid-cols-12">
-                    <div className="col-span-12 text-center">
-                        <p className="text-[#4d5574] text-[16px]">Our nearly 1.4K committed staff members are ready to help. <span className="text-[#96ae00]">Help Center.</span></p>
-                    </div>
                 </div>
             </div>
         </section>

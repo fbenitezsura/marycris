@@ -7,7 +7,7 @@ const FeaturedProducts = ({
   collections: any
 }) => {
   return (
-    <div className="py-12 max-w-[1180px] mx-auto">
+    <div className="py-6 md:py-12 max-w-[1180px] mx-auto">
       <CategoryRail collections={collections} />
     </div>
   )

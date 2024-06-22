@@ -59,9 +59,10 @@ export default function Tabs({
                     )}
                 </Tab.Panels>
             </Tab.Group>
-            <p className="text-[#4d5574] text-[16px] mt-[40px] flex justify-center">Descrube todo la calidad de nuestros productos.
-                <Link href="/" className="text-[16px] text-[#96ae00] flex items-center">
-                    Tienda <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
+            <p className="text-[#4d5574] text-[16px] mt-[40px] flex md:flex-row flex-col justify-center">Descrube todo la calidad de nuestros productos.
+                <Link href="/" className="text-[16px] text-[#96ae00] flex items-center justify-center mt-2 md:mt-0">
+                    Tienda 
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
                         <path fill-rule="evenodd" d="M13.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L11.69 12 4.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clip-rule="evenodd" />
                         <path fill-rule="evenodd" d="M19.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 1 1-1.06-1.06L17.69 12l-6.97-6.97a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clip-rule="evenodd" />
                     </svg>

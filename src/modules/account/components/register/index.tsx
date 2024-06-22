@@ -106,7 +106,7 @@ const Register = () => {
           </Link>
           .
         </span>
-        <Button className="mt-6 w-full" size="xlarge">
+        <Button className="mt-6 w-full bg-[#2D2A6E] hover:bg-[#2D2A6E]" size="xlarge">
           Registrarme
         </Button>
       </form>

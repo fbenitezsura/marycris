@@ -195,7 +195,7 @@ const DiscountCode: React.FC<DiscountCodeProps> = ({ cart }) => {
               <Button
                 type="submit"
                 variant="secondary"
-                className="!min-h-[0] h-10 bg-[#FF813A] hover:bg-[#FF813A] text-white"
+                className="!min-h-[0] h-10 bg-[#2D2A6E] hover:bg-[#2D2A6E] text-white"
                 isLoading={isLoading}
               >
                 Aplicar

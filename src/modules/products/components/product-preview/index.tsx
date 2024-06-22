@@ -15,6 +15,7 @@ const ProductPreview = ({
 }: ProductPreviewType & {
   inStock: boolean
 }) => {
+
   return (
     <Link href={`/products/${handle}`} className="group">
       <div className="relative border-[1px] border-[#ebeff4] rounded-[10px] bg-white">
@@ -23,12 +24,10 @@ const ProductPreview = ({
             <span className="text-white text-[12px]">{inStock ? 'Stock' : 'Sin Stock'}</span>
           </div>
         )}
-
         <Thumbnail className="p-[20px]" thumbnail={thumbnail} size="square" isFeatured={true} />
-
         <div className="h-auto min-h-[115px] p-[16px] rounded-b-lg">
-          <Text className="text-[13px] text-[#79819c] text-left">{handle}</Text>
-          <Text className="text-[16px] text-[#2d2a6e] font-normal text-left">{title}</Text>
+          {/*<Text className="text-[13px] text-[#79819c] text-left">{handle}</Text>*/}
+          <Text className="text-[16px] h-[48px] text-[#2d2a6e] font-normal text-left">{title}</Text>
           <StarRating rating={5} />
           <div className="mt-[10px] text-left">
             {price ? (
@@ -56,8 +55,7 @@ const ProductPreview = ({
             <p>Agregar al carrito</p>
           </button>
           <div className="flex flex-col text-left text-[13px] pl-[10px] text-[#79819c]">
-            <p>Categoria: {handle} </p>
-            <p>Proteina: 11g por unidad.</p>
+            <p>Proteina: 6g por unidad.</p>
           </div>
         </div>
       </div>

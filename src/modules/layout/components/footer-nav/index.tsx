@@ -42,11 +42,11 @@ const FooterNav = () => {
               <span className="txt-small-plus text-white txt-ui-fg-base">Contacto</span>
               <ul className="grid grid-cols-1 gap-y-2 text-ui-fg-subtle txt-small">
                 <li>
-                  <span className="text-white">Concepción, Octava Región</span>
+                  <span className="text-white">Coronel, Octava Región</span>
                 </li>
                 <li>
                   <p className="font-bold mt-2 text-white">WHATSAPP</p>
-                  <span className="text-white">(+56 9) 44218010</span>
+                  <span className="text-white">(+569) 89582586</span>
                 </li>
               </ul>
             </div>
