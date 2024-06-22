@@ -35,7 +35,7 @@ const Addresses = () => {
         </Heading>
         {!isOpen && (
           <Text>
-            <button onClick={handleEdit} className="text-ui-fg-interactiv text-[#FF813A]">
+            <button onClick={handleEdit} className="text-ui-fg-interactive text-[#FF813A]">
               Editar
             </button>
           </Text>
@@ -60,7 +60,7 @@ const Addresses = () => {
 
           <Button
             size="large"
-            className="mt-6 bg-[#FF813A] hover:bg-[#FF813A] text-white"
+            className="mt-6 bg-[#2D2A6E] hover:bg-[#2D2A6E] text-white"
             onClick={handleSubmit(setAddresses)}
           >
             Continuar con el despacho

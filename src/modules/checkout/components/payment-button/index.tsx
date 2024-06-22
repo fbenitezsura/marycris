@@ -247,7 +247,7 @@ const FlowPaymentButton = ({ notReady }: { notReady: boolean }) => {
       isLoading={submitting}
       onClick={handlePayment}
       size="large"
-      className="bg-[#FF813A] hover:bg-[#FF813A] text-white"
+      className="bg-[#2A2D6E] hover:bg-[#2A2D6E] text-white"
     >
       Realizar Pago
     </Button>

@@ -143,7 +143,7 @@ const Payment = () => {
         </Heading>
         {!isOpen && addressReady && shippingReady && (
           <Text>
-            <button onClick={handleEdit} className="text-ui-fg-interactive text-[#FF813A]">
+            <button onClick={handleEdit} className="text-ui-fg-interactive text-[#2A2D6E]">
               Editar
             </button>
           </Text>
@@ -195,7 +195,7 @@ const Payment = () => {
               onClick={handleSubmit}
               type="submit"
               size="large"
-              className="mt-6 bg-[#FF813A] hover:bg-[#FF813A] text-white"
+              className="mt-6 bg-[#2A2D6E] hover:bg-[#2A2D6E] text-white"
               disabled={
                 !cart.payment_session?.provider_id ||
                 (cart.payment_session?.provider_id === "stripe" &&

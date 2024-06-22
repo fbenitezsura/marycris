@@ -21,7 +21,7 @@ const Summary = ({ cart, customer }: SummaryProps) => {
       <CartTotals data={cart} />
       {customer ? (
         <Link href="/checkout">
-          <Button className="w-full h-10 bg-[#FF5733] hover:bg-[#FF5733] text-white">Ir a pagar</Button>
+          <Button className="w-full h-10 bg-[#2D2A6E] hover:bg-[#2D2A6E] text-white">Ir a pagar</Button>
         </Link>
       ) : (
         <div className="flex justify-center">

@@ -150,7 +150,7 @@ const Shipping: React.FC<ShippingProps> = ({ cart }) => {
                       key={option.value}
                       value={option.value}
                       className={clx(
-                        "flex items-center justify-between text-small-regular cursor-pointer py-4 border rounded-rounded px-8 mb-2 hover:shadow-borders-interactive-with-active",
+                        "flex items-center justify-between text-small-regular cursor-pointer py-4 border rounded-rounded px-8 mb-2",
                         {
                           "border-ui-border-interactive":
                             option.value === shippingOptionId,
@@ -190,7 +190,7 @@ const Shipping: React.FC<ShippingProps> = ({ cart }) => {
 
           <Button
             size="large"
-            className="mt-6"
+            className="mt-6 bg-[#2D2A6E] hover:bg-[#2D2A6E]"
             onClick={() => submitShippingOption(shippingOptionId)}
           >
             Continuar con el pago
