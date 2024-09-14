@@ -329,6 +329,7 @@ export const CheckoutProvider = ({ children }: CheckoutProviderProps) => {
           updatePaymentSession.mutate({
             provider_id: 'flow-payment',
             data: {
+              subject: 'Pago Mary cris',
               order_id: data.id,
               email: data.email,
               amount: data.total
