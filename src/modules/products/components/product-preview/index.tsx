@@ -54,9 +54,11 @@ const ProductPreview = ({
           <button className="pt-[1px] h-[37px] mb-[10px] w-full px-[10px] md:px-[20px] bg-[#96ae00] leading-[35px] uppercase font-semibold rounded-[50px] text-[13px] text-white">
             <p>Agregar al carrito</p>
           </button>
-          <div className="flex flex-col text-left text-[13px] pl-[10px] text-[#79819c]">
-            <p>Proteina: 6g por unidad.</p>
-          </div>
+          {title.toLowerCase().includes('huevos') || title.toLowerCase().includes('huevo') && (
+            <div className="flex flex-col text-left text-[13px] pl-[10px] text-[#79819c]">
+              <p>Proteina: 6g por unidad.</p>
+            </div>
+          )}
         </div>
       </div>
     </Link>

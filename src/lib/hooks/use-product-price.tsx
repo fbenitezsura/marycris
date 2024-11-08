@@ -69,11 +69,11 @@ const useProductPrice = ({ id, variantId }: useProductPriceProps) => {
     }
 
     return {
-      calculated_price: variant.original_price,
-      original_price: variant.original_price,
+      calculated_price: variant.calculated_price_incl_tax,
+      original_price: variant.calculated_price_incl_tax,
       price_type: variant.calculated_price_type,
       percentage_diff: getPercentageDiff(
-        variant.original_price,
+        variant.calculated_price_incl_tax,
         variant.calculated_price
       ),
     }

@@ -20,7 +20,7 @@ const Nav = () => {
 
   return (
     <div className="sticky top-0 inset-x-0 z-50 group">
-      <div className="h-[38px] bg-[#2d2a6e] text-white text-[13px] flex justify-around items-center">
+      <div className="h-[45px] bg-[#2d2a6e] text-white text-[13px] flex justify-around items-center">
         <div className="hidden md:flex justify-between items-center">
           <a href="https://www.facebook.com/Mari-Cris" className="cursor-pointer" target="_blank">
             <svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="h-[14px] w-[14px] mr-2" fill="white">
@@ -36,7 +36,7 @@ const Nav = () => {
             ¡Síguenos!
           </span>
         </div>
-        <p className="text-center text-[12px] md:text-[14px]">¡ ENVIO A $1 ! por compras superiores a $49.990</p>
+        <p className="text-center text-[12px] md:text-[14px]">¡REPARTOS! Cajas: de lunes a sábado // Bandejas: martes, jueves y sábado. (Se agendan despachos para el mismo día hasta las 12:30 hrs.)</p>
         <div className="hidden md:block">
           <span className="text-[9px] md:text-[14px]">Contáctanos: +569 44218010</span>
         </div>
