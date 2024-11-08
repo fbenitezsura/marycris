@@ -36,7 +36,7 @@ const Nav = () => {
             ¡Síguenos!
           </span>
         </div>
-        <p className="text-center text-[12px] md:text-[14px]">¡REPARTOS! Cajas: de lunes a sábado // Bandejas: martes, jueves y sábado. (Se agendan despachos para el mismo día hasta las 12:30 hrs.)</p>
+        <p className="text-center text-[12px] md:text-[14px]">¡REPARTOS! lunes a sábado (Se agendan despachos para el mismo día hasta las 12:30 hrs.)</p>
         <div className="hidden md:block">
           <span className="text-[9px] md:text-[14px]">Contáctanos: +569 44218010</span>
         </div>

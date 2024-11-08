@@ -5,23 +5,23 @@ const WhyChoose = () => {
     const benefits = [
         {
             imgSrc: "https://orfarm-next-js.vercel.app/assets/img/icon/choose-icon1.svg",
-            title: "100% Frescos",
-            description: "Disfruta de huevos frescos y de calidad. Ajusta tus preferencias y ve los cambios en tiempo real."
+            title: "Amplia Selección",
+            description: "Explora nuestra variedad de productos de calidad. Personaliza tus preferencias y observa los cambios en tiempo real."
         },
         {
             imgSrc: "https://orfarm-next-js.vercel.app/assets/img/icon/choose-icon2.svg",
-            title: "Calidad Premium",
-            description: "Ofrecemos huevos de la más alta calidad. Ajusta tus opciones y observa el diseño en tiempo real."
+            title: "Precios Competitivos",
+            description: "Ofrecemos precios que se ajustan a tu bolsillo. Ajusta tus opciones y ve cómo se adaptan a tu presupuesto al instante."
         },
         {
             imgSrc: "https://orfarm-next-js.vercel.app/assets/img/icon/choose-icon3.svg",
-            title: "100% Naturales",
-            description: "Nuestros huevos son completamente naturales. Personaliza tus preferencias y observa los cambios al instante."
+            title: "Atención Personalizada",
+            description: "Estamos aquí para ayudarte en cada paso. Personaliza tu experiencia y observa los cambios en tiempo real."
         },
         {
             imgSrc: "https://orfarm-next-js.vercel.app/assets/img/icon/choose-icon4.svg",
-            title: "100% Orgánicos",
-            description: "Encuentra huevos totalmente orgánicos. Ajusta tus opciones y ve los cambios en tiempo real."
+            title: "Calidad Garantizada",
+            description: "Comprometidos con ofrecer productos de excelencia. Ajusta tus preferencias y observa los resultados al instante."
         }
     ];
 

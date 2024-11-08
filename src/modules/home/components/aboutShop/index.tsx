@@ -4,17 +4,17 @@ const AboutShop = () => {
         {
             imgSrc: "https://orfarm-next-js.vercel.app/assets/img/icon/about-svg1.svg",
             title: "Selecciona tus Productos",
-            description: "Elige entre una variedad de huevos frescos y útiles de aseo. Mantén, agrega o elimina artículos según tus necesidades."
+            description: "Elige entre una amplia variedad de productos de calidad. Mantén, agrega o elimina artículos según tus necesidades."
         },
         {
             imgSrc: "https://orfarm-next-js.vercel.app/assets/img/icon/about-svg2.svg",
-            title: "Nuestra Tienda Ovhuevos",
-            description: "Descubre huevos frescos, opciones orgánicas y una amplia gama de útiles de aseo."
+            title: "Nuestra Tienda Online",
+            description: "Descubre opciones frescas, orgánicas y una amplia gama de artículos para el hogar."
         },
         {
             imgSrc: "https://orfarm-next-js.vercel.app/assets/img/icon/about-svg3.svg",
             title: "Entrega a tu Puerta",
-            description: "Recibe productos frescos y útiles de aseo en la puerta de tu casa, de manera rápida y fácil."
+            description: "Recibe tus productos directamente en la puerta de tu casa, de manera rápida y fácil."
         }
     ];
 
@@ -23,9 +23,9 @@ const AboutShop = () => {
             <div className="col-span-12 xl:px-[20px] flex flex-col text-center mb-[45px]">
                 <img className="h-full w-[390px] mx-auto rounded-[1px]" src="/img/banners/nature.webp" />
                 <p className='text-center mt-[30px]'>
-                    Somos una tienda en línea especializada en huevos frescos.<br />
-                    Además de nuestra amplia variedad de huevos, también ofrecemos una selección de útiles de aseo de alta calidad.<br />
-                    ¡Visítanos y descubre la frescura de nuestros huevos y la excelencia de nuestros productos de aseo!
+                    <strong>Somos una tienda en línea especializada en productos de alta calidad.</strong>
+                    Además de nuestra amplia variedad de artículos, también ofrecemos una selección de productos para el hogar de excelencia. <br />
+                    ¡Visítanos y descubre la calidad de nuestros productos y la excelencia de nuestro servicio!
                 </p>
             </div>
             {sections.map((section, index) => (
