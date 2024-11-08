@@ -5,7 +5,7 @@ import clsx from "clsx"
 import React, { useEffect, useImperativeHandle, useState } from "react"
 import { get } from "react-hook-form"
 import { Label, Input as UiInput } from "@medusajs/ui"
-import Dropdown from '@modules/common/components/modal/listbox/index'
+import Dropdown from '@modules/common/components/listbox/index';
 type InputProps = Omit<
   Omit<React.InputHTMLAttributes<HTMLInputElement>, "size">,
   "placeholder"
