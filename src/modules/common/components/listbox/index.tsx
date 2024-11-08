@@ -26,7 +26,7 @@ const optionsVariants = {
     none: '',
 }
 
-export default function Dropdown({
+function Dropdown({
     title,
     items,
     value,
@@ -71,3 +71,5 @@ export default function Dropdown({
         </Menu>
     )
 }
+
+export default Dropdown;

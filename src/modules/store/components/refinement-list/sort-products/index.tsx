@@ -1,6 +1,6 @@
 import { StoreGetProductsParams } from "@medusajs/medusa"
 import { ChangeEvent, useState } from "react"
-import Dropdown from '@modules/common/components/listbox';
+import Dropdown from '@modules/common/components/listbox/index';
 import { Adjustments } from "@medusajs/icons";
 import SidebarFiltersMobile from '@modules/store/components/refinement-list/sidebar-mobile-filter/index';
 export type SortOptions = "price_asc" | "price_desc" | "created_at"

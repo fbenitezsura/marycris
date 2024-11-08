@@ -42,20 +42,9 @@ const ProductActionsInner: React.FC<ProductActionsProps> = ({ product }) => {
           >
             <ShowNumberFormat value={selectedPrice.calculated_price} />
           </span>
-          <ul className="relative list-none">
-            <li className="relative">
-              <span className="absolute top-1/2 left-0 h-1.5 w-1.5 transform -translate-y-1/2 bg-gray-700 rounded-full"></span>
-              <span className="text-[14px] leading-[22px] text-[#4d5574] pl-[18px]">Saludables & Nutritivos</span>
-            </li>
-            <li className="relative">
-              <span className="absolute top-1/2 left-0 h-1.5 w-1.5 transform -translate-y-1/2 bg-gray-700 rounded-full"></span>
-              <span className="text-[14px] leading-[22px] text-[#4d5574] pl-[18px]">Beneficios para el corazón y cerebro</span>
-            </li>
-            <li className="relative">
-              <span className="absolute top-1/2 left-0 h-1.5 w-1.5 transform -translate-y-1/2 bg-gray-700 rounded-full"></span>
-              <span className="text-[14px] leading-[22px] text-[#4d5574] pl-[18px]">Yemas más ricas, claras más firmes</span>
-            </li>
-          </ul>
+          <div className="w-full bg-[#000]">
+            {product.description}
+          </div>
           {selectedPrice.price_type === "sale" && (
             <>
               <p>
