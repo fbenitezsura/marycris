@@ -6,22 +6,22 @@ const WhyChoose = () => {
         {
             imgSrc: "https://orfarm-next-js.vercel.app/assets/img/icon/choose-icon1.svg",
             title: "Amplia Selección",
-            description: "Explora nuestra variedad de productos de calidad. Personaliza tus preferencias y observa los cambios en tiempo real."
+            description: "Explora nuestra variedad de productos de alta calidad. Personaliza tus preferencias y disfruta de una experiencia adaptada a tus necesidades."
         },
         {
             imgSrc: "https://orfarm-next-js.vercel.app/assets/img/icon/choose-icon2.svg",
             title: "Precios Competitivos",
-            description: "Ofrecemos precios que se ajustan a tu bolsillo. Ajusta tus opciones y ve cómo se adaptan a tu presupuesto al instante."
+            description: "Ofrecemos precios accesibles para ti. Ajusta tus opciones y disfruta de una experiencia personalizada al instante."
         },
         {
             imgSrc: "https://orfarm-next-js.vercel.app/assets/img/icon/choose-icon3.svg",
             title: "Atención Personalizada",
-            description: "Estamos aquí para ayudarte en cada paso. Personaliza tu experiencia y observa los cambios en tiempo real."
+            description: "Estamos aquí para apoyarte en cada etapa. Personaliza tu experiencia y disfruta de una atención de calidad.."
         },
         {
             imgSrc: "https://orfarm-next-js.vercel.app/assets/img/icon/choose-icon4.svg",
             title: "Calidad Garantizada",
-            description: "Comprometidos con ofrecer productos de excelencia. Ajusta tus preferencias y observa los resultados al instante."
+            description: "Comprometidos con ofrecer productos de excelencia. Explora nuestras opciones y disfruta de sus beneficios."
         }
     ];
 

@@ -8,9 +8,6 @@ type ProductHeaderProps = {
 }
 
 const ProductHeader: React.FC<ProductHeaderProps> = ({ product }) => {
-
-    console.log('product', product)
-
     return (
         <div id="product-info">
             <div className="flex flex-col lg:max-w-[500px]">

@@ -8,7 +8,9 @@ import InteractiveLink from "@modules/common/components/interactive-link"
 
 const ProductRail = ({ collections }: { collections: ProductCollection }) => {
 
-  const { data } = useFeaturedProductsQuery(collections.id)
+  const { data } = useFeaturedProductsQuery(collections.id);
+
+  console.log('acad', data);
 
   return (
     <div className="small:py-2">
@@ -20,12 +22,11 @@ const ProductRail = ({ collections }: { collections: ProductCollection }) => {
           </InteractiveLink>
         </div>
         <ul className="grid grid-cols-2 small:grid-cols-3 gap-x-6 gap-y-8">
-          {data &&
-            data.map((product) => (
-              <li key={product.id}>
-                <ProductPreview isFeatured {...product} />
-              </li>
-            ))}
+          {data && data.map((product) => (
+            <li key={product.id}>
+              <ProductPreview isFeatured {...product} />
+            </li>
+          ))}
           {data?.length === 0 && (
             <div className="col-span-12 flex justify-center my-[40px]">
               <span>Sin productos disponibles.</span>

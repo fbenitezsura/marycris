@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 
 export default async function Home() {
 
-  const { collections, count } = await getCollectionsList(0, 3);
+  const { collections, count } = await getCollectionsList(0, 7);
 
   return (
     <>

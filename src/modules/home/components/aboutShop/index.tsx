@@ -23,7 +23,7 @@ const AboutShop = () => {
             <div className="col-span-12 xl:px-[20px] flex flex-col text-center mb-[45px]">
                 <img className="h-full w-[390px] mx-auto rounded-[1px]" src="/img/banners/nature.webp" />
                 <p className='text-center mt-[30px]'>
-                    <strong>Somos una tienda en línea especializada en productos de alta calidad.</strong>
+                    <strong>Somos una tienda en línea especializada en productos de alta calidad.</strong> <br />
                     Además de nuestra amplia variedad de artículos, también ofrecemos una selección de productos para el hogar de excelencia. <br />
                     ¡Visítanos y descubre la calidad de nuestros productos y la excelencia de nuestro servicio!
                 </p>

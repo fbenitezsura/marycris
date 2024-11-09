@@ -83,8 +83,6 @@ const fetchFeaturedProducts = async (
         return acc
       }, variants[0])
 
-      console.log('p',p)
-
       return {
         id: p.id!,
         title: p.title!,

@@ -4,7 +4,9 @@ import { Tab } from '@headlessui/react';
 import ProductPreview from "@modules/products/components/product-preview"
 import { useFeaturedProductsQuery } from "@lib/hooks/use-layout-data"
 import { useEffect, useState } from 'react';
-import Link from "next/link"
+import Link from "next/link";
+import Spinner from "@modules/common/icons/spinner";
+
 function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
 }
@@ -20,6 +22,10 @@ export default function Tabs({
     const [collectionSelected, setCollectionSelected] = useState(0);
 
     const { data } = useFeaturedProductsQuery(collections[collectionSelected]?.id);
+
+    console.log('data',data);
+
+    console.log('collectionSelected',collectionSelected);
 
     return (
         <div className="w-full px-2 py-8 sm:px-0 md:px-[40px]">
@@ -43,8 +49,13 @@ export default function Tabs({
                     ))}
                 </Tab.List>
                 <Tab.Panels className="grid grid-cols-12 gap-x-6 gap-y-8 mt-[10px]">
+                    {!data && (
+                        <div className="col-span-12 h-[430px] flex flex-col items-center justify-center">
+                            <Spinner size="40" />
+                            <p className="mt-3 text-xl">Cargando Productos...</p>
+                        </div>
+                    )}
                     {data && data.map((product) => {
-                        console.log('product', product)
                         return (
                             <div className="col-span-12 md:col-span-3">
                                 <ProductPreview isFeatured {...product} />

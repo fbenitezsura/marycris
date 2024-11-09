@@ -162,8 +162,20 @@ export async function getCollectionsList(
       throw err
     })
 
+  const titlesToFilter = ['Huevos Blancos', 'Confort', 'Limpieza y Aseo'];
+
+  const filteredCollection = collections.filter(item => titlesToFilter.includes(item.title));
+
+  const titleOrderMap = titlesToFilter.reduce((acc, title, index) => {
+    acc[title] = index;
+    return acc;
+  }, {});
+  
+  // 4. Ordenar el array filtrado según el orden definido en titlesToFilter
+  filteredCollection.sort((a, b) => titleOrderMap[a.title] - titleOrderMap[b.title]);
+
   return {
-    collections,
+    collections: filteredCollection,
     count,
   }
 }

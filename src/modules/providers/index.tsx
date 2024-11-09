@@ -14,7 +14,7 @@ export default function Providers({ children }: { children: React.ReactNode }) {
     // Inicialización del script de Tawk.to
     const script = document.createElement('script');
     script.async = true;
-    script.src = 'https://embed.tawk.to/660b5cbfa0c6737bd1273466/1hqe64j8f';
+    script.src = 'https://embed.tawk.to/672eba524304e3196adf8539/1ic78fl7q';
     script.charset = 'UTF-8';
     script.setAttribute('crossorigin', '*');
     document.body.appendChild(script);
