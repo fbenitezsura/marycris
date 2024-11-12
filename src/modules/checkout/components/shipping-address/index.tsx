@@ -124,10 +124,6 @@ const ShippingAddress = ({
                   label: 'Coronel'
                 },
                 {
-                  value: 'Galilea',
-                  label: 'Galilea'
-                },
-                {
                   value: 'Escuadrón',
                   label: 'Escuadrón'
                 }].map(({ value, label }, index) => (

@@ -1,4 +1,4 @@
-import React, { useMemo } from "react"
+import React, { useEffect, useMemo, useRef } from "react"
 import { medusaClient } from "@lib/config"
 import { Cart } from "@medusajs/medusa"
 import { Button, Label, Tooltip, Text, Heading } from "@medusajs/ui"
@@ -28,6 +28,8 @@ const DiscountCode: React.FC<DiscountCodeProps> = ({ cart }) => {
     }
   )
 
+  const hasMutated = useRef(false);
+
   const appliedDiscount = useMemo(() => {
     if (!discounts || !discounts.length) {
       return undefined
@@ -46,6 +48,45 @@ const DiscountCode: React.FC<DiscountCodeProps> = ({ cart }) => {
         return "Free shipping"
     }
   }, [discounts, region])
+
+  useEffect(() => {
+    if (
+      cart?.payment_session?.provider_id !== "manual" &&
+      !hasMutated.current &&
+      (!cart.discounts || cart.discounts.length > 0)
+    ) {
+      hasMutated.current = true
+
+      mutate(
+        {
+          discounts: [],
+        },
+        {
+          onSuccess: ({ cart }) => {
+            setCart(cart)
+          },
+          onError: () => {
+            setError(
+              "discount_code",
+              {
+                message: "Code is invalid",
+              },
+              {
+                shouldFocus: true,
+              }
+            )
+            hasMutated.current = false
+          },
+        }
+      )
+    }
+  }, [
+    cart?.payment_session?.provider_id,
+    cart.discounts,
+    mutate,
+    setCart
+  ])
+
 
   const {
     register,
@@ -169,7 +210,7 @@ const DiscountCode: React.FC<DiscountCodeProps> = ({ cart }) => {
                 >
                   <Trash size={14} />
                   <span className="sr-only">
-                  Eliminar el código de descuento del pedido
+                    Eliminar el código de descuento del pedido
                   </span>
                 </button>
               </div>

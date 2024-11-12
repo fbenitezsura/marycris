@@ -24,6 +24,10 @@ const CheckoutSummary = () => {
         >
           En tu Carrito
         </Heading>
+        {cart?.payment_session?.provider_id === "manual" && (
+          <p className="mt-1">Con transferencia usar el código: <strong>EFECTIVO10</strong></p>
+        )}
+        
         <Divider className="my-6" />
         <CartTotals data={cart} />
         <ItemsPreviewTemplate region={cart?.region} items={cart?.items} />

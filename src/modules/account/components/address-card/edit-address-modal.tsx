@@ -244,10 +244,6 @@ const EditAddress: React.FC<EditAddressProps> = ({
                 label: 'Coronel'
               }, 
               {
-                value: 'Galilea',
-                label: 'Galilea'
-              },
-              {
                 value: 'Escuadrón',
                 label: 'Escuadrón'
               }].map(({ value, label }, index) => (

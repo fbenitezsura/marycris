@@ -194,10 +194,6 @@ const AddAddress: React.FC = () => {
                 label: 'Coronel'
               }, 
               {
-                value: 'Galilea',
-                label: 'Galilea'
-              },
-              {
                 value: 'Escuadrón',
                 label: 'Escuadrón'
               }].map(({ value, label }, index) => (
