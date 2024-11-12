@@ -10,7 +10,7 @@ import { Suspense } from "react"
 export const metadata: Metadata = {
   title: "MaryCris",
   description:
-    "A performant frontend ecommerce starter template with Next.js 14 and Medusa.",
+    "Compra en línea en Emporio Mary Cris y recibe todos tus productos de supermercado en la puerta de tu casa en Coronel. Ahorra tiempo evitando filas y disfruta de entregas rápidas y seguras. ¡Usa el código EFECTIVO10 para un 10% de descuento al pagar con transferencia!",
 }
 
 
