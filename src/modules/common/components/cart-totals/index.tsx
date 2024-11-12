@@ -9,6 +9,7 @@ type CartTotalsProps = {
 }
 
 const CartTotals: React.FC<CartTotalsProps> = ({ data }) => {
+  console.log('data',data);
   const {
     subtotal,
     discount_total,

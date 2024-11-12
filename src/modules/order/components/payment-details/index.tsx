@@ -50,6 +50,11 @@ const PaymentDetails = ({ order }: PaymentDetailsProps) => {
                 </Text>
               </div>
             </div>
+            <div className="w-1/3">
+              {paymentInfoMap[payment.provider_id].title === 'Transferencia Bancaria' && (
+                <p className="text-2xl font-bold">Enviar Voucher al Whatsapp</p>
+              )}
+            </div>
           </div>
         )}
       </div>

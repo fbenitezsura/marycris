@@ -258,16 +258,16 @@ export const CheckoutProvider = ({ children }: CheckoutProviderProps) => {
     const setValue = methods.setValue
 
     setValue("shipping_address", {
-      address_1: address.address_1 || "",
-      address_2: address.address_2 || "",
-      city: address.city || "",
-      country_code: address.country_code || "",
-      first_name: address.first_name || "",
-      last_name: address.last_name || "",
-      phone: address.phone || "",
-      postal_code: address.postal_code || "",
-      province: address.province || "",
-      company: address.company || "",
+      address_1: address?.address_1 || "",
+      address_2: address?.address_2 || "",
+      city: address?.city || "",
+      country_code: address?.country_code || "",
+      first_name: address?.first_name || "",
+      last_name: address?.last_name || "",
+      phone: address?.phone || "",
+      postal_code: address?.postal_code || "",
+      province: address?.province || "",
+      company: address?.company || "",
     })
   }
 

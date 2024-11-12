@@ -112,19 +112,19 @@ const ProfileBillingAddress: React.FC<MyInformationProps> = ({ customer }) => {
     return (
       <div className="flex flex-col font-semibold">
         <span>
-          {customer.billing_address.first_name}{" "}
-          {customer.billing_address.last_name}
+          {customer?.billing_address?.first_name}{" "}
+          {customer?.billing_address?.last_name}
         </span>
-        <span>{customer.billing_address.company}</span>
+        <span>{customer?.billing_address?.company}</span>
         <span>
-          {customer.billing_address.address_1}
-          {customer.billing_address.address_2
-            ? `, ${customer.billing_address.address_2}`
+          {customer?.billing_address?.address_1}
+          {customer?.billing_address?.address_2
+            ? `, ${customer?.billing_address?.address_2}`
             : ""}
         </span>
         <span>
-          {customer.billing_address.postal_code},{" "}
-          {customer.billing_address.city}
+          {customer?.billing_address?.postal_code},{" "}
+          {customer?.billing_address?.city}
         </span>
         <span>{country}</span>
       </div>
