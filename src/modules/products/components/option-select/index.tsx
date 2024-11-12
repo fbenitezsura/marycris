@@ -38,7 +38,7 @@ const OptionSelect: React.FC<OptionSelectProps> = ({
             className={clsx(
               "border border-gray-300 text-sm h-10 rounded p-2 flex-1 bg-white transition-colors duration-150",
               {
-                "bg-blue-500 text-white border-blue-500": v === current, // Seleccionado
+                "bg-[#e2e2e2] text-black border-[#bbbbbb] border-2": v === current, // Seleccionado
                 "hover:bg-gray-100": v !== current, // Hover suave
               }
             )}

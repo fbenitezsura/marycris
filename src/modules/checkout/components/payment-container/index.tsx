@@ -54,11 +54,11 @@ const PaymentContainer: React.FC<PaymentContainerProps> = ({
                   </Tooltip>
                 )}
               <div className="flex flex-col text-center">
-                <p>Banco: Banco Estado</p>
-                <p>Cuenta: 11.111.111-1</p>
-                <p>Rut: 11.111.111-1</p>
-                <p>Nombre: Huevos</p>
-                <p>Email: clientes@marycris.cl</p>
+                <p>Banco: Banco Falabella</p>
+                <p>Cuenta: 18110015933</p>
+                <p>Rut: 18.813.582-k</p>
+                <p>Nombre: Felipe Benitez Sura</p>
+                <p>Email: felipebenitezsura@gmail.com</p>
               </div>
             </div>
             <span className="justify-self-end text-gray-700">

@@ -155,10 +155,10 @@ const DiscountCode: React.FC<DiscountCodeProps> = ({ cart }) => {
         {appliedDiscount ? (
           <div className="w-full flex items-center">
             <div className="flex flex-col w-full">
-              <Heading className="txt-medium">Discount applied:</Heading>
+              <Heading className="txt-medium">Descuento aplicado:</Heading>
               <div className="flex items-center justify-between w-full max-w-full">
                 <Text className="flex gap-x-1 items-baseline txt-small-plus w-4/5 pr-1">
-                  <span>Code:</span>
+                  <span>Codigó:</span>
                   <span className="truncate">{discounts[0].code}</span>
                   <span className="min-w-fit">({appliedDiscount})</span>
                 </Text>
@@ -169,7 +169,7 @@ const DiscountCode: React.FC<DiscountCodeProps> = ({ cart }) => {
                 >
                   <Trash size={14} />
                   <span className="sr-only">
-                    Remove discount code from order
+                  Eliminar el código de descuento del pedido
                   </span>
                 </button>
               </div>

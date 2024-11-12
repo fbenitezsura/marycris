@@ -39,7 +39,7 @@ const PaymentButton: React.FC<PaymentButtonProps> = ({ paymentSession }) => {
         <FlowPaymentButton notReady={notReady} />
       )
     default:
-      return <Button disabled>Select a payment method</Button>
+      return <Button disabled>Selecciona un metodo de pago</Button>
   }
 }
 

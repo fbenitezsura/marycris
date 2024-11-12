@@ -97,18 +97,24 @@ const Shipping: React.FC<ShippingProps> = ({ cart }) => {
 
   const editingOtherSteps = isAddressesOpen || isPaymentOpen
 
-  // Memoized shipping method options
   const shippingMethods: ShippingOption[] = useMemo(() => {
-    if (shipping_options && cart?.region) {
-      return shipping_options?.map((option) => ({
-        value: option.id,
-        label: option.name,
-        price: option.amount || 0,
-      }))
+    const city = cart?.billing_address?.city?.toLowerCase().trim()
+
+    if (shipping_options && cart?.region && city) {
+      return shipping_options
+        .filter(option =>
+          option.name.toLowerCase().includes(city)
+        )
+        .map(option => ({
+          value: option.id,
+          label: option.name,
+          price: option.amount || 0,
+        }))
     }
 
     return []
   }, [shipping_options, cart])
+
 
   return (
     <div className="bg-white p-4 small:px-8">

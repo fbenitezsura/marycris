@@ -91,14 +91,14 @@ const ShippingAddress = ({
                 required
               />
               <NativeSelect
-              placeholder="Región"
-              {...register("shipping_address.province", {
-                required: "Región es requerida",
-              })}
-              autoComplete="address-level1"
-              errors={errors}
-              touched={touchedFields}
-              required
+                placeholder="Región"
+                {...register("shipping_address.province", {
+                  required: "Región es requerida",
+                })}
+                autoComplete="address-level1"
+                errors={errors}
+                touched={touchedFields}
+                required
               >
                 {[{
                   value: 'VIII',
@@ -110,18 +110,26 @@ const ShippingAddress = ({
                 ))}
               </NativeSelect>
               <NativeSelect
-              placeholder="Ciudad"
-              {...register("shipping_address.city", {
-                required: "Ciudad es requerida",
-              })}
-              autoComplete="address-level2"
-              errors={errors}
-              touched={touchedFields}
-              required
+                placeholder="Ciudad"
+                {...register("shipping_address.city", {
+                  required: "Ciudad es requerida",
+                })}
+                autoComplete="address-level2"
+                errors={errors}
+                touched={touchedFields}
+                required
               >
                 {[{
                   value: 'Coronel',
                   label: 'Coronel'
+                },
+                {
+                  value: 'Galilea',
+                  label: 'Galilea'
+                },
+                {
+                  value: 'Escuadrón',
+                  label: 'Escuadrón'
                 }].map(({ value, label }, index) => (
                   <option key={index} value={value}>
                     {label}
